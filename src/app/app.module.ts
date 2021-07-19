@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Components PrimNG
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
+// Modulos personalizados
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +15,7 @@ import { CardModule } from 'primeng/card';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule,
-    CardModule,    
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

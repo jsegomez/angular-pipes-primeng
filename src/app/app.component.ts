@@ -6,17 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-  
-  title = 'pipes';
-  isLoading: boolean = false;
-
-  changeState(){    
-    this.isLoading = true;
-    
-    setTimeout(() => {
-      this.isLoading = false;      
-    }, 5500);
-  }
 
   
 
