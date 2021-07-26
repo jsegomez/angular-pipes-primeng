@@ -1,1 +1,76 @@
-<p>basicos works!</p>
+<div class="text-layout animate__animated animate__fadeIn">
+    <h3>Pipes básicos incluidos en CommondModule</h3>
+
+    <div class="grid">
+        <div class="col-12 xl:col-3 lg:col-4 md:col-6">
+            <p-card header="Uppercase">
+                {{ nombre | uppercase }}
+            </p-card>        
+        </div>
+        <div class="col-12 xl:col-3 lg:col-4 md:col-6">
+            <p-card header="Lowercase">
+                {{ nombre | lowercase }}
+            </p-card>        
+        </div>
+        <div class="col-12 xl:col-3 lg:col-4 md:col-6">
+            <p-card header="Titlecase">
+                {{ nombre | titlecase }}
+            </p-card>        
+        </div>
+    </div>
+
+
+    <div class="grid">
+        <div class="col-12">
+            <p-card header="Pipes para manejo de fechas">
+                <div class="grid">
+                    <div class="col-12 sm:col-6">
+                        <ul>
+                            <li>{{ currentDate }}</li>
+                            <li>{{ currentDate | date }}</li>
+                            <li>{{ currentDate | date: 'short' }}</li>
+                            <li>{{ currentDate | date: 'long' }}</li>                            
+                            <li>{{ currentDate | date: 'MM'}}</li>
+                            <li>{{ currentDate | date: 'dd/M/yy'}}</li>
+                            <li>{{ currentDate | date: 'dd/MM/yyyy'}}</li>
+                            <li>{{ currentDate | date: 'dd/MM/yyyy hh:mm:ss'}}</li>
+                        </ul>
+
+                        <hr>
+
+                        <h3>Pipes indicando zonas horarias</h3>
+
+                        <ul>
+                            <li>{{ currentDate | date: 'long':'GMT-5' }}</li>
+                            <li>{{ currentDate | date: 'long':'GMT-6' }}</li>
+                            <li>{{ currentDate | date: 'long':'GMT-5':'fr' }}</li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12 sm:col-6">
+                        <ul>
+                            <li>Sin Pipe</li>
+                            <li>Pipe Date argumentos</li>
+                            <li>Pipe argumento short</li>
+                            <li>Pipe argumento long</li>                            
+                            <li>Pipe argumento 'MM'</li>
+                            <li>Pipe argumento 'dd/M/yy'</li>
+                            <li>Pipe argumento 'dd/MM/yyyy'</li>
+                            <li>Pipe argumento 'dd/MM/yyyy hh:mm:ss'</li>
+                        </ul>
+
+                        <hr>
+
+                        <h3>Resultado:</h3>
+
+                        <ul>
+                            <li>Pipe date argumento date:'long':'GMT-5'</li>
+                            <li>Pipe date argumento date:'long':'GMT-5'</li>                            
+                            <li>Pipe date argumento date:'long':'':'fr'</li>
+                        </ul>
+                    </div>
+                </div>
+            </p-card>        
+        </div>
+    </div>
+</div>

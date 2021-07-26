@@ -9,7 +9,11 @@ export class BasicosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  nombre      : string = 'josué gómez';
+  currentDate : Date = new Date();
 }
+
+
+

@@ -1,1 +1,27 @@
-<p>numeros works!</p>
+<div class="text-layout animate__animated animate__fadeIn">
+    <h1>DecimalPipe y Porcent</h1>
+
+    <p> Pipes incluidos en AngularCommon</p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-4 xl:col-3">
+        <p-card header="Ventas netas" subheader="Año 2021">
+            <ul>
+                <li>
+                    Sin Pipe: {{ ventasNetas | number }}
+                </li>
+                <li>
+                    Con 4 decimales: {{ ventasNetas | number:'1.2-4' }}
+                </li>
+            </ul>
+            
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4 xl:col-3">
+        <p-card header="header">
+            Content
+        </p-card>
+    </div>
+    
+</div>

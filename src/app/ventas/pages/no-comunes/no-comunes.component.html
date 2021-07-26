@@ -1,1 +1,34 @@
-<p>no-comunes works!</p>
+<div class="text-layout animate__animated animate__fadeIn">
+    <h2>Pipes no tan comunes</h2>    
+
+    <div class="grid">
+
+        <div class="col-12 md:col-6">
+            <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+                Saludos {{ name }}, es un placer
+                {{ genre | i18nSelect:invitacionMapa }}
+                a nuestro evento.
+            </p-fieldset>
+        </div>
+    
+        <div class="col-12 md:col-6">
+            <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+                Content
+            </p-fieldset>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
