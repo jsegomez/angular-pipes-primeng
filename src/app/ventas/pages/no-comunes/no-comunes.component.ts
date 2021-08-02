@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -72,5 +73,7 @@ export class NoComunesComponent implements OnInit {
       vuela: false
     }
   ]
+
+  myObservable = interval(1000);
 
 }

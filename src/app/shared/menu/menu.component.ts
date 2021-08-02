@@ -43,7 +43,13 @@ export class MenuComponent implements OnInit {
       {
         label: 'Personalizados',
         icon: 'pi pi-cog',
-
+        items: [
+          {
+            label: 'Mayusculas',
+            icon: 'pi pi-align-left',
+            routerLink: 'ordenar'
+          },
+        ]
       }
     ];
   }
