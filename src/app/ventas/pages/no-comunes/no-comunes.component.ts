@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api'; 
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-no-comunes',
@@ -18,11 +18,11 @@ export class NoComunesComponent implements OnInit {
 
   isFemenino: boolean = true;
   name: string = this.isFemenino ? 'Karla' : 'Josué';
-  genre: string  = this.isFemenino ? 'femenino' : 'masculino';
+  genre: string = this.isFemenino ? 'femenino' : 'masculino';
 
   invitacionMapa = {
-    'masculino' : 'invitarlo',
-    'femenino'  : 'invitarla',
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla',
   }
 
   clientes: string[] = ['María', 'José', 'Karla', 'Josué', 'Saúl', 'Victor'];
@@ -31,22 +31,46 @@ export class NoComunesComponent implements OnInit {
     '=0': 'no tenemos ningún cliente esperando',
     '=1': 'un ciente esperando',
     '=2': 'dos clientes esperando',
-    'other': '# clientes esperando.' 
+    'other': '# clientes esperando.'
   }
 
-  cambiarPersona(){
+  texto: string = 'Hola mundo';
+
+  cambiarPersona() {
     this.isFemenino = !this.isFemenino;
     this.genre = this.isFemenino ? 'femenino' : 'masculino';
     this.name = this.isFemenino ? 'Karla' : 'Josué';
   }
 
-  eliminarPersona(){
+  eliminarPersona() {
     const position = this.clientes.length;
-    
-    if(position == 0) return;
+
+    if (position == 0) return;
     this.clientes = this.clientes.slice(1, position);
     console.log(this.clientes.length);
-    
   }
+
+  // Keyvalue PIPE
+  persona = {
+    nombre: 'Josué Eliezer',
+    edad: 35,
+    direccion: 'San Salvador, Soyapango'
+  }
+
+  // Json Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Spiderman',
+      vuela: false
+    },
+    {
+      nombre: 'Batman',
+      vuela: false
+    }
+  ]
 
 }
