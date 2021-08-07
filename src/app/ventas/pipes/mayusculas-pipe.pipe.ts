@@ -5,8 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MayusculasPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string, mayusculas: boolean): unknown {    
+    if(mayusculas){
+      return value.toUpperCase();
+    }else{
+      return value.toLowerCase();
+    }    
   }
 
 }
+
+
+
